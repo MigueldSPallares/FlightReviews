@@ -79,9 +79,6 @@
     "European_airport" : {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/European_airport"
     },
-    "Seat" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Seat"
-    },
     "Place" : {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Place"
     },
@@ -111,8 +108,8 @@
     "City" : {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/City"
     },
-    "flightReviewed" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/flightReviewed",
+    "reviewsFlight" : {
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/reviewsFlight",
       "@type" : "@id"
     },
     "South_American_airport" : {
@@ -135,12 +132,11 @@
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/commentBody",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "routeProperty" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/routeProperty",
-      "@type" : "@id"
-    },
     "Negative_review" : {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Negative_review"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/SeatType"
     },
     "TravellerType" : {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/TravellerType"
