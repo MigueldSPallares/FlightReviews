@@ -310,9 +310,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Positive_review
 :Positive_review rdf:type owl:Class ;
-                 rdfs:subClassOf :Reception ;
-                 rdfs:comment "The author liked the flight." ;
-                 rdfs:label "Positive_review" .
+                 rdfs:subClassOf :Reception .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Reception
@@ -519,6 +517,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
          rdfs:comment "Instance of North American city" ;
          rdfs:label "Toronto" .
 
+
 #################################################################
 #    Rules
 #################################################################
@@ -531,10 +530,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 <urn:swrl:var#w> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Positive_review_rule" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
