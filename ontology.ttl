@@ -25,9 +25,8 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/destinationIs
-:destinationIs rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :routeProperty ;
-               rdf:type owl:AsymmetricProperty ;
+:destinationIs rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
                rdfs:domain :Flight ;
                rdfs:range :Place ;
                owl:propertyDisjointWith :originIs ;
@@ -44,29 +43,22 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
               rdfs:label "flightMadeBy" .
 
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/flightReviewed
-:flightReviewed rdf:type owl:ObjectProperty ,
-                         owl:AsymmetricProperty ;
-                rdfs:domain :Review ;
-                rdfs:range :Flight ;
-                rdfs:comment "Indicates the flight of the review" ;
-                rdfs:label "flightReviewed" .
-
-
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/originIs
-:originIs rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :routeProperty ;
-          rdf:type owl:AsymmetricProperty ;
+:originIs rdf:type owl:ObjectProperty ,
+                   owl:AsymmetricProperty ;
           rdfs:domain :Flight ;
           rdfs:range :Place ;
           rdfs:comment "Indicates the place where the plane departed." ;
           rdfs:label "originIs" .
 
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/routeProperty
-:routeProperty rdf:type owl:ObjectProperty ;
-               rdfs:comment "Group of objects properties related to the origin and destination of the flight." ;
-               rdfs:label "routeProperty" .
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/reviewsFlight
+:reviewsFlight rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain :Review ;
+               rdfs:range :Flight ;
+               rdfs:comment "Indicates the flight of the review" ;
+               rdfs:label "reviewsFlight" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/seatWas
@@ -74,7 +66,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdf:type owl:AsymmetricProperty ;
          rdfs:domain :Review ;
-         rdfs:range :Seat ;
+         rdfs:range :SeatType ;
          rdfs:comment "Indicates the type of seat of the review." ;
          rdfs:label "seatWas" .
 
@@ -111,7 +103,8 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/dateReview
-:dateReview rdf:type owl:DatatypeProperty ;
+:dateReview rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
             rdfs:domain :Review ;
             rdfs:range xsd:dateTime ;
             rdfs:comment "It indicates the date where the review was posted." ;
@@ -153,7 +146,8 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/isFromCountry
-:isFromCountry rdf:type owl:DatatypeProperty ;
+:isFromCountry rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
                rdfs:domain :Author ;
                rdfs:range xsd:string ;
                rdfs:comment "It indicates the country of the author." ;
@@ -220,7 +214,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                                    :Premium_economy
                                                  )
                                      ] ;
-                 rdfs:subClassOf :Seat ;
+                 rdfs:subClassOf :SeatType ;
                  rdfs:comment "The seat is not expensive" ;
                  rdfs:label "Economy_quality" .
 
@@ -247,7 +241,9 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Flight_info
-:Flight_info rdf:type owl:Class .
+:Flight_info rdf:type owl:Class ;
+             rdfs:comment "It contains information regarding the flight" ;
+             rdfs:label "Flight_info" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/High_quality
@@ -257,7 +253,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                                 :First_class
                                               )
                                   ] ;
-              rdfs:subClassOf :Seat ;
+              rdfs:subClassOf :SeatType ;
               rdfs:comment "The seat was of high quality." ;
               rdfs:label "High_quality" .
 
@@ -349,11 +345,11 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
              rdfs:label "Review_info" .
 
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Seat
-:Seat rdf:type owl:Class ;
-      rdfs:subClassOf :Review_info ;
-      rdfs:comment "This class indicates the type of seat the author was on." ;
-      rdfs:label "Seat" .
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/SeatType
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :Review_info ;
+          rdfs:comment "This class indicates the type of seat the author was on." ;
+          rdfs:label "SeatType" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/South_American_airport
@@ -492,7 +488,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Review_1
 :Review_1 rdf:type owl:NamedIndividual ,
                    :Review ;
-          :flightReviewed :Flight_1 ;
+          :reviewsFlight :Flight_1 ;
           :writtenBy :Paula_Sanchez ;
           :dateReview "2021-03-14T18:21:22"^^xsd:dateTime ;
           :hasRating 8 ;
@@ -503,7 +499,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Review_2
 :Review_2 rdf:type owl:NamedIndividual ,
                    :Review ;
-          :flightReviewed :Flight_2 ;
+          :reviewsFlight :Flight_2 ;
           :writtenBy :Paula_Sanchez ;
           :dateReview "2017-03-18T14:31:43"^^xsd:dateTime ;
           :hasRating 5 ;
@@ -522,6 +518,5 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                   :North_American_city ;
          rdfs:comment "Instance of North American city" ;
          rdfs:label "Toronto" .
-
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
