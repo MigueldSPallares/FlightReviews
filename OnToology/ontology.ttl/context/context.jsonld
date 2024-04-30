@@ -1,72 +1,72 @@
 {
   "@context" : {
     "hasTitle" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/hasTitle",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/hasTitle",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "European_city" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/European_city"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/European_city"
     },
     "originIs" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/originIs",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/originIs",
       "@type" : "@id"
     },
     "flightMadeBy" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/flightMadeBy",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/flightMadeBy",
       "@type" : "@id"
     },
     "Mixed_review" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Mixed_review"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Mixed_review"
     },
     "hasRating" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/hasRating"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/hasRating"
     },
     "Review" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Review"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Review"
     },
     "isRuleEnabled" : {
       "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
     },
     "Leisure" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Leisure"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Leisure"
     },
     "North_American_city" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/North_American_city"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/North_American_city"
     },
     "writtenBy" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/writtenBy",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/writtenBy",
       "@type" : "@id"
     },
     "Economy_quality" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Economy_quality"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Economy_quality"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "Reception" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Reception"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Reception"
     },
     "Airplane" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Airplane"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Airplane"
     },
     "Business" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Business"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Business"
     },
     "Airport" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Airport"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Airport"
     },
     "High_quality" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/High_quality"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/High_quality"
     },
     "hasAge" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/hasAge",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/hasAge",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "Flight_info" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Flight_info"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Flight_info"
     },
     "dateReview" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/dateReview",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/dateReview",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "topObjectProperty" : {
@@ -74,52 +74,52 @@
       "@type" : "@id"
     },
     "Asian_city" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Asian_city"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Asian_city"
     },
     "European_airport" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/European_airport"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/European_airport"
     },
     "Place" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Place"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Place"
     },
     "Asian_airport" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Asian_airport"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Asian_airport"
     },
     "South_American_city" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/South_American_city"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/South_American_city"
     },
     "travellerTypeWas" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/travellerTypeWas",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/travellerTypeWas",
       "@type" : "@id"
     },
     "isFromCountry" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/isFromCountry",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/isFromCountry",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Review_info" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Review_info"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Review_info"
     },
     "Flight" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Flight"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Flight"
     },
     "Author" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Author"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Author"
     },
     "City" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/City"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/City"
     },
     "reviewsFlight" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/reviewsFlight",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/reviewsFlight",
       "@type" : "@id"
     },
     "South_American_airport" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/South_American_airport"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/South_American_airport"
     },
     "North_American_airport" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/North_American_airport"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/North_American_airport"
     },
     "destinationIs" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/destinationIs",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/destinationIs",
       "@type" : "@id"
     },
     "sameAs" : {
@@ -129,24 +129,24 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "commentBody" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/commentBody",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/commentBody",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Negative_review" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Negative_review"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Negative_review"
     },
     "SeatType" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/SeatType"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/SeatType"
     },
     "TravellerType" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/TravellerType"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/TravellerType"
     },
     "seatWas" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/seatWas",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/seatWas",
       "@type" : "@id"
     },
     "Positive_review" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flight-reviews/Positive_review"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/untitled-ontology-7/Positive_review"
     }
   }
 }
