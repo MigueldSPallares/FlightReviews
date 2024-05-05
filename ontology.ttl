@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
 @base <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/> .
 
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/> rdf:type owl:Ontology .
@@ -13,7 +14,7 @@
 #################################################################
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
-<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
@@ -25,66 +26,66 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> rdf:type owl:ObjectProperty ,
+:destinationIs rdf:type owl:ObjectProperty ,
                         owl:AsymmetricProperty ;
-               rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
-               rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> ;
-               owl:propertyDisjointWith <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> ;
+               rdfs:domain :Flight ;
+               rdfs:range :Place ;
+               owl:propertyDisjointWith :originIs ;
                rdfs:comment "Indicates the place where the plane arrived." ;
                rdfs:label "destinationIs" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> rdf:type owl:ObjectProperty ,
+:flightMadeBy rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ;
-              rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
-              rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane> ;
+              rdfs:domain :Flight ;
+              rdfs:range :Airplane ;
               rdfs:comment "Indicates which plane made the flight" ;
               rdfs:label "flightMadeBy" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> rdf:type owl:ObjectProperty ,
+:originIs rdf:type owl:ObjectProperty ,
                    owl:AsymmetricProperty ;
-          rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
-          rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> ;
+          rdfs:domain :Flight ;
+          rdfs:range :Place ;
           rdfs:comment "Indicates the place where the plane departed." ;
           rdfs:label "originIs" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight> rdf:type owl:ObjectProperty ,
+:reviewsFlight rdf:type owl:ObjectProperty ,
                         owl:AsymmetricProperty ;
-               rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-               rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
+               rdfs:domain :Review ;
+               rdfs:range :Flight ;
                rdfs:comment "Indicates the flight of the review" ;
                rdfs:label "reviewsFlight" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/seatWas
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/seatWas> rdf:type owl:ObjectProperty ;
+:seatWas rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdf:type owl:AsymmetricProperty ;
-         rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-         rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType> ;
+         rdfs:domain :Review ;
+         rdfs:range :SeatType ;
          rdfs:comment "Indicates the type of seat of the review." ;
          rdfs:label "seatWas" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/travellerTypeWas
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/travellerTypeWas> rdf:type owl:ObjectProperty ,
+:travellerTypeWas rdf:type owl:ObjectProperty ,
                            owl:AsymmetricProperty ;
-                  rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-                  rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType> ;
+                  rdfs:domain :Review ;
+                  rdfs:range :TravellerType ;
                   rdfs:comment "Indicates the type of traveller the author was on the reviewed flight." ;
                   rdfs:label "travellerTypeWas" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> rdf:type owl:ObjectProperty ,
+:writtenBy rdf:type owl:ObjectProperty ,
                     owl:AsymmetricProperty ;
-           rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-           rdfs:range <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> ;
+           rdfs:domain :Review ;
+           rdfs:range :Author ;
            rdfs:comment "Indicates who wrote the review." ;
            rdfs:label "writtenBy" .
 
@@ -94,36 +95,36 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody> rdf:type owl:DatatypeProperty ,
+:commentBody rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
-             rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
+             rdfs:domain :Review ;
              rdfs:range xsd:string ;
              rdfs:comment "It states the whole body of the review." ;
              rdfs:label "commentBody" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview> rdf:type owl:DatatypeProperty ,
+:dateReview rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
+            rdfs:domain :Review ;
             rdfs:range xsd:dateTime ;
             rdfs:comment "It indicates the date where the review was posted." ;
             rdfs:label "dateReview" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasAge
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasAge> rdf:type owl:DatatypeProperty ,
+:hasAge rdf:type owl:DatatypeProperty ,
                  owl:FunctionalProperty ;
-        rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> ;
+        rdfs:domain :Author ;
         rdfs:range xsd:integer ;
         rdfs:comment "It indicates the age of the author." ;
         rdfs:label "hasAge" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasRating
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasRating> rdf:type owl:DatatypeProperty ,
+:hasRating rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
-           rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
+           rdfs:domain :Review ;
            rdfs:range [ rdf:type rdfs:Datatype ;
                         owl:onDatatype xsd:int ;
                         owl:withRestrictions ( [ xsd:minExclusive "0"^^xsd:int
@@ -137,18 +138,18 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasTitle
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasTitle> rdf:type owl:DatatypeProperty ,
+:hasTitle rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
-          rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
+          rdfs:domain :Review ;
           rdfs:range xsd:string ;
           rdfs:comment "It states the title of the review" ;
           rdfs:label "hasTitle" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/isFromCountry
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/isFromCountry> rdf:type owl:DatatypeProperty ,
+:isFromCountry rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
-               rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> ;
+               rdfs:domain :Author ;
                rdfs:range xsd:string ;
                rdfs:comment "It indicates the country of the author." ;
                rdfs:label "isFromCountry" .
@@ -159,172 +160,172 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane> rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_info> ;
+:Airplane rdf:type owl:Class ;
+          rdfs:subClassOf :Flight_info ;
           rdfs:comment "The aircraft that made the flight" ;
           rdfs:label "Airplane" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport> rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> ;
+:Airport rdf:type owl:Class ;
+         rdfs:subClassOf :Place ;
          rdfs:comment "Place where planes take off and land." ;
          rdfs:label "Airport" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Asian_airport
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Asian_airport> rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport> ;
+:Asian_airport rdf:type owl:Class ;
+               rdfs:subClassOf :Airport ;
                rdfs:comment "The airport is from Asia." ;
                rdfs:label "Asian_airport" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Asian_city
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Asian_city> rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City> ;
+:Asian_city rdf:type owl:Class ;
+            rdfs:subClassOf :City ;
             rdfs:comment "The city is from Asia" ;
             rdfs:label "Asian_city" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> rdf:type owl:Class ;
-        rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info> ;
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf :Review_info ;
         rdfs:comment "Person that wrote the review." ;
         rdfs:label "Author" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business> rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType> ;
+:Business rdf:type owl:Class ;
+          rdfs:subClassOf :TravellerType ;
           rdfs:comment "The traveller made the trip for business reasons." ;
           rdfs:label "Business" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City> rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> ;
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Place ;
       rdfs:comment "The city where the plane takes off or lands, organized by the continent they reside." ;
       rdfs:label "City" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_quality
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_quality> rdf:type owl:Class ;
+:Economy_quality rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Class ;
                                        owl:oneOf ( :Economy_class
                                                    :Premium_economy
                                                  )
                                      ] ;
-                 rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType> ;
+                 rdfs:subClassOf :SeatType ;
                  rdfs:comment "The seat is not expensive" ;
                  rdfs:label "Economy_quality" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_airport
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_airport> rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport> ;
+:European_airport rdf:type owl:Class ;
+                  rdfs:subClassOf :Airport ;
                   rdfs:comment "The airport is from Europe." ;
                   rdfs:label "European_airport" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_city
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_city> rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City> ;
+:European_city rdf:type owl:Class ;
+               rdfs:subClassOf :City ;
                rdfs:comment "The city is from Europe" ;
                rdfs:label "European_city" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> rdf:type owl:Class ;
+:Flight rdf:type owl:Class ;
         rdfs:comment "This indicates the travel from one place to another with a flying vehicle." ;
         rdfs:label "Flight" ;
         rdfs:sameAs "https://dbpedia.org/page/Flight" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_info
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_info> rdf:type owl:Class ;
+:Flight_info rdf:type owl:Class ;
              rdfs:comment "It contains information regarding the flight" ;
              rdfs:label "Flight_info" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/High_quality
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/High_quality> rdf:type owl:Class ;
+:High_quality rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Class ;
-                                    owl:oneOf ( <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_class>
-                                                <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class>
+                                    owl:oneOf ( :Business_class
+                                                :First_class
                                               )
                                   ] ;
-              rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType> ;
+              rdfs:subClassOf :SeatType ;
               rdfs:comment "The seat was of high quality." ;
               rdfs:label "High_quality" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Leisure> rdf:type owl:Class ;
+:Leisure rdf:type owl:Class ;
          owl:equivalentClass [ rdf:type owl:Class ;
-                               owl:oneOf ( <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure>
-                                           <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure>
-                                           <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure>
+                               owl:oneOf ( :Couple_leisure
+                                           :Family_leisure
+                                           :Solo_leisure
                                          )
                              ] ;
-         rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType> ;
+         rdfs:subClassOf :TravellerType ;
          rdfs:comment "The traveller made the trip to relax, whether solo, with their family or their couple." ;
          rdfs:label "Leisure" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Mixed_review
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Mixed_review> rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Reception> ;
-              owl:disjointWith <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Negative_review> ,
-                               <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Positive_review> ;
+:Mixed_review rdf:type owl:Class ;
+              rdfs:subClassOf :Reception ;
+              owl:disjointWith :Negative_review ,
+                               :Positive_review ;
               rdfs:comment "The author has mixed feelings of the flight." ;
               rdfs:label "Mixed_review" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Negative_review
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Negative_review> rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Reception> ;
-                 owl:disjointWith <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Positive_review> ;
+:Negative_review rdf:type owl:Class ;
+                 rdfs:subClassOf :Reception ;
+                 owl:disjointWith :Positive_review ;
                  rdfs:comment "The author didn't like the flight." ;
                  rdfs:label "Negative_review" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_airport
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_airport> rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport> ;
+:North_American_airport rdf:type owl:Class ;
+                        rdfs:subClassOf :Airport ;
                         rdfs:comment "The airport is from North America." ;
                         rdfs:label "North_American_airport" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_city
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_city> rdf:type owl:Class ;
-                     rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City> ;
+:North_American_city rdf:type owl:Class ;
+                     rdfs:subClassOf :City ;
                      rdfs:comment "The city is from North America" ;
                      rdfs:label "North_American_city" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_info> ;
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf :Flight_info ;
        rdfs:comment "Location where the plane lands or takes off." ;
        rdfs:label "Place" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Positive_review
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Positive_review> rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Reception> ;
+:Positive_review rdf:type owl:Class ;
+                 rdfs:subClassOf :Reception ;
                  rdfs:comment "The author liked the flight" ;
                  rdfs:label "Positive_review" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Reception
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Reception> rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
+:Reception rdf:type owl:Class ;
+           rdfs:subClassOf :Review ;
            rdfs:comment "It indicates how the author thinks of the flight." ;
            rdfs:label "Reception" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> rdf:type owl:Class ;
+:Review rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :dateReview ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -341,35 +342,35 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info> rdf:type owl:Class ;
+:Review_info rdf:type owl:Class ;
              rdfs:comment "This class contains the info related to the review." ;
              rdfs:label "Review_info" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType> rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info> ;
+:SeatType rdf:type owl:Class ;
+          rdfs:subClassOf :Review_info ;
           rdfs:comment "This class indicates the type of seat the author was on." ;
           rdfs:label "SeatType" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/South_American_airport
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/South_American_airport> rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airport> ;
+:South_American_airport rdf:type owl:Class ;
+                        rdfs:subClassOf :Airport ;
                         rdfs:comment "The airport is from South America." ;
                         rdfs:label "South_American_airport" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/South_American_city
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/South_American_city> rdf:type owl:Class ;
-                     rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/City> ;
+:South_American_city rdf:type owl:Class ;
+                     rdfs:subClassOf :City ;
                      rdfs:comment "The city is from South America" ;
                      rdfs:label "South_American_city" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType> rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info> ;
+:TravellerType rdf:type owl:Class ;
+               rdfs:subClassOf :Review_info ;
                rdfs:comment "This class indicates the type of traveller the author was." ;
                rdfs:label "TravellerType" .
 
@@ -379,144 +380,144 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona> rdf:type owl:NamedIndividual ,
-                    <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_city> ;
+:Barcelona rdf:type owl:NamedIndividual ,
+                    :European_city ;
            rdfs:comment "Important city of Spain." ;
            rdfs:label "Barcelona" ;
            rdfs:sameAs "https://dbpedia.org/page/Barcelona" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_class
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_class> rdf:type owl:NamedIndividual ;
+:Business_class rdf:type owl:NamedIndividual ;
                 rdfs:comment "Type of high quality seat." ;
                 rdfs:label "Business_class" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_trip
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_trip> rdf:type owl:NamedIndividual ,
-                        <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business> ;
+:Business_trip rdf:type owl:NamedIndividual ,
+                        :Business ;
                rdfs:comment "Sole of instance of Business" ;
                rdfs:label "Business_trip" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure> rdf:type owl:NamedIndividual ;
+:Couple_leisure rdf:type owl:NamedIndividual ;
                 rdfs:comment "Type of leisure travel where the passenger travels with their couple." ;
                 rdfs:label "Couple_leisure" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class
-<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class> rdf:type owl:NamedIndividual ;
+:Economy_class rdf:type owl:NamedIndividual ;
                rdfs:comment "Cheapest type of seat." ;
                rdfs:label "Economy_class" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure> rdf:type owl:NamedIndividual ;
+:Family_leisure rdf:type owl:NamedIndividual ;
                 rdfs:comment "Type of leisure travel where the passenger travels with their family." ;
                 rdfs:label "Family_leisure" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class> rdf:type owl:NamedIndividual ;
+:First_class rdf:type owl:NamedIndividual ;
              rdfs:comment "Type of high quality seat" ;
              rdfs:label "First_class" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_1
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_1> rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_1> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> ;
+:Flight_1 rdf:type owl:NamedIndividual ,
+                   :Flight ;
+          :destinationIs :Barcelona ;
+          :flightMadeBy :Plane_1 ;
+          :originIs :Toronto ;
           rdfs:comment "Instance of flight" ;
           rdfs:label "Flight_1" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_2
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_2> rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/LHR> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_2> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> ;
+:Flight_2 rdf:type owl:NamedIndividual ,
+                   :Flight ;
+          :destinationIs :LHR ;
+          :flightMadeBy :Plane_2 ;
+          :originIs :Toronto ;
           rdfs:comment "Instance of flight" ;
           rdfs:label "Flight_2" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/LHR
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/LHR> rdf:type owl:NamedIndividual ,
-              <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_airport> ;
+:LHR rdf:type owl:NamedIndividual ,
+              :European_airport ;
      rdfs:comment "Instance of airport" ;
      rdfs:label "LHR" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/New_York
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/New_York> rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_city> ;
+:New_York rdf:type owl:NamedIndividual ,
+                   :North_American_city ;
           rdfs:comment "Instance of North American city." ;
           rdfs:label "New_York" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Paula_Sanchez
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Paula_Sanchez> rdf:type owl:NamedIndividual ,
-                        <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> ;
-               <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasAge> 35 ;
-               <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/isFromCountry> "Spain" ;
+:Paula_Sanchez rdf:type owl:NamedIndividual ,
+                        :Author ;
+               :hasAge 35 ;
+               :isFromCountry "Spain" ;
                rdfs:comment "Instance of author" ;
                rdfs:label "Paula_Sanchez" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_1
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_1> rdf:type owl:NamedIndividual ,
-                  <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane> ;
+:Plane_1 rdf:type owl:NamedIndividual ,
+                  :Airplane ;
          rdfs:comment "Instance of Plane" ;
          rdfs:label "Plane_1" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_2
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_2> rdf:type owl:NamedIndividual ,
-                  <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane> ;
+:Plane_2 rdf:type owl:NamedIndividual ,
+                  :Airplane ;
          rdfs:comment "Instance of Plane" ;
          rdfs:label "Plane_2" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Premium_economy
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Premium_economy> rdf:type owl:NamedIndividual ;
+:Premium_economy rdf:type owl:NamedIndividual ;
                  rdfs:comment "Second cheapest type of seat." ;
                  rdfs:label "Premium_economy" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_1
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_1> rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight> :Flight_1 ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> :Paula_Sanchez ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview> "2021-03-14T18:21:22"^^xsd:dateTime ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasRating> 8 ;
+:Review_1 rdf:type owl:NamedIndividual ,
+                   :Review ;
+          :reviewsFlight :Flight_1 ;
+          :writtenBy :Paula_Sanchez ;
+          :dateReview "2021-03-14T18:21:22"^^xsd:dateTime ;
+          :hasRating 8 ;
           rdfs:comment "Instance of review." ;
           rdfs:label "Review_1" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_2
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_2> rdf:type owl:NamedIndividual ,
-                   <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight_2> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Paula_Sanchez> ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview> "2017-03-18T14:31:43"^^xsd:dateTime ;
-          <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/hasRating> 5 ;
+:Review_2 rdf:type owl:NamedIndividual ,
+                   :Review ;
+          :reviewsFlight :Flight_2 ;
+          :writtenBy :Paula_Sanchez ;
+          :dateReview "2017-03-18T14:31:43"^^xsd:dateTime ;
+          :hasRating 5 ;
           rdfs:comment "Instance of review." ;
           rdfs:label "Review_2" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Solo_leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Solo_leisure> rdf:type owl:NamedIndividual ;
+:Solo_leisure rdf:type owl:NamedIndividual ;
               rdfs:comment "Type of leisure travel where the passenger travels alone." ;
               rdfs:label "Solo_leisure" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> rdf:type owl:NamedIndividual ,
-                  <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_city> ;
+:Toronto rdf:type owl:NamedIndividual ,
+                  :North_American_city ;
          rdfs:comment "Instance of North American city" ;
          rdfs:label "Toronto" .
 
