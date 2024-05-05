@@ -96,13 +96,13 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/commentBody
-<http://www.semanticweb.org/miguel/ontologies/2024/3/commentBody> rdf:type owl:DatatypeProperty ,
-                                                                           owl:FunctionalProperty ;
-                                                                  rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/Review> ;
-                                                                  rdfs:range xsd:string ;
-                                                                  rdfs:comment "It states the whole body of the review." ;
-                                                                  rdfs:label "commentBody" .
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody
+:commentBody rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Review ;
+             rdfs:range xsd:string ;
+             rdfs:comment "It states the whole body of the review." ;
+             rdfs:label "commentBody" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview
@@ -160,10 +160,6 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
-
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/Review
-<http://www.semanticweb.org/miguel/ontologies/2024/3/Review> rdf:type owl:Class .
-
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane
 :Airplane rdf:type owl:Class ;
