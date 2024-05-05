@@ -94,9 +94,9 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody
-<http://www.semanticweb.org/miguel/ontologies/2024/3/commentBody> rdf:type owl:DatatypeProperty ,
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody> rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
-             rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/Review> ;
+             rdfs:domain <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review> ;
              rdfs:range xsd:string ;
              rdfs:comment "It states the whole body of the review." ;
              rdfs:label "commentBody" .
