@@ -129,7 +129,7 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "commentBody" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/commentBody",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Negative_review" : {
