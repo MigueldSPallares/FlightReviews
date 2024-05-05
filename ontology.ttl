@@ -427,7 +427,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 :Flight_1 rdf:type owl:NamedIndividual ,
                    :Flight ;
           :destinationIs :Barcelona ;
-          :flightMadeBy :Plane-1 ;
+          :flightMadeBy :Plane_1 ;
           :originIs :Toronto ;
           rdfs:comment "Instance of flight" ;
           rdfs:label "Flight_1" .
@@ -437,7 +437,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 :Flight_2 rdf:type owl:NamedIndividual ,
                    :Flight ;
           :destinationIs :LHR ;
-          :flightMadeBy :Plane-2 ;
+          :flightMadeBy :Plane_2 ;
           :originIs :Toronto ;
           rdfs:comment "Instance of flight" ;
           rdfs:label "Flight_2" .
@@ -466,18 +466,18 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                rdfs:label "Paula_Sanchez" .
 
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane-1
-:Plane-1 rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_1
+:Plane_1 rdf:type owl:NamedIndividual ,
                   :Airplane ;
          rdfs:comment "Instance of Plane" ;
-         rdfs:label "Plane-1" .
+         rdfs:label "Plane_1" .
 
 
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane-2
-:Plane-2 rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Plane_2
+:Plane_2 rdf:type owl:NamedIndividual ,
                   :Airplane ;
          rdfs:comment "Instance of Plane" ;
-         rdfs:label "Plane-2" .
+         rdfs:label "Plane_2" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Premium_economy
