@@ -112,24 +112,6 @@
     "@value" : "Family_leisure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/Review",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/commentBody",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "It states the whole body of the review."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/Review"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "commentBody"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
 }, {
@@ -734,6 +716,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review_info"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/commentBody",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It states the whole body of the review."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "commentBody"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/dateReview",

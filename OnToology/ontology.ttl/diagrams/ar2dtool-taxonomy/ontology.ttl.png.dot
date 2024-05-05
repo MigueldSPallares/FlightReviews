@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:Asian_airport" "base:TravellerType" "base:Place" "base:Negative_review" "base:Author" "base:Economy_quality" "base:Review_info" "base:North_American_airport" "base:SeatType" "base:European_city" "base:South_American_city" "base:South_American_airport" "base:Mixed_review" "base:Leisure" "base:Asian_city" "base:Review" "base:Business" "base:High_quality" "base:Airport" "base:Positive_review" "base:European_airport" "base:Reception" "base:Airplane" "base:North_American_city" "base:Flight_info" "base:City" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:Asian_airport" "base:TravellerType" "base:Place" "base:Negative_review" "base:Author" "base:Economy_quality" "base:Review_info" "base:North_American_airport" "base:SeatType" "base:European_city" "base:South_American_city" "base:South_American_airport" "base:Mixed_review" "base:Leisure" "base:Asian_city" "base:Review" "base:Business" "base:High_quality" "base:Airport" "base:Positive_review" "base:Reception" "base:European_airport" "base:Airplane" "base:North_American_city" "base:Flight_info" "base:City" ; /*classes style*/
 	"base:Author" -> "base:Review_info" [ label = "rdfs:subClassOf" ];
 	"base:TravellerType" -> "base:Review_info" [ label = "rdfs:subClassOf" ];
 	"base:City" -> "base:Place" [ label = "rdfs:subClassOf" ];
