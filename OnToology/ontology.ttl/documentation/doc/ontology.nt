@@ -11,6 +11,9 @@
 # http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2000/01/rdf-schema#sameAs
 <http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -28,7 +31,6 @@
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the place where the plane arrived." .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/destinationIs> <http://www.w3.org/2000/01/rdf-schema#label> "destinationIs" .
 # 
@@ -39,14 +41,6 @@
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which plane made the flight" .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy> <http://www.w3.org/2000/01/rdf-schema#label> "flightMadeBy" .
-# 
-# http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the place where the plane departed." .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs> <http://www.w3.org/2000/01/rdf-schema#label> "originIs" .
 # 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -80,6 +74,14 @@
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Author> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates who wrote the review." .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/writtenBy> <http://www.w3.org/2000/01/rdf-schema#label> "writtenBy" .
+# 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the place where the plane departed." .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> <http://www.w3.org/2000/01/rdf-schema#label> "originIs" .
 # 
 # 
 # 
@@ -209,6 +211,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Premium_economy> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_quality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/SeatType> .
@@ -260,11 +263,14 @@ _:genid12 <http://www.w3.org/2002/07/owl#oneOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Solo_leisure> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/TravellerType> .
@@ -370,6 +376,21 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of leisure travel where the passenger travels with their couple." .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Couple_leisure" .
+# 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class> <http://www.w3.org/2000/01/rdf-schema#comment> "Cheapest type of seat." .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class> <http://www.w3.org/2000/01/rdf-schema#label> "Economy_class" .
+# 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of leisure travel where the passenger travels with their family." .
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Family_leisure" .
+# 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_city> .
@@ -389,19 +410,10 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Business_trip> <http://www.w3.org/2000/01/rdf-schema#label> "Business_trip" .
 # 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of leisure travel where the passenger travels with their couple." .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Couple_leisure" .
 # 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class> <http://www.w3.org/2000/01/rdf-schema#comment> "Cheapest type of seat." .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class> <http://www.w3.org/2000/01/rdf-schema#label> "Economy_class" .
 # 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of leisure travel where the passenger travels with their family." .
-<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure> <http://www.w3.org/2000/01/rdf-schema#label> "Family_leisure" .
 # 
 # http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -493,5 +505,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/North_American_city> .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance of North American city" .
 <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Toronto> <http://www.w3.org/2000/01/rdf-schema#label> "Toronto" .
+# 
+# http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

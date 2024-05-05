@@ -8,7 +8,7 @@
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/European_city"
     },
     "originIs" : {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs",
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs",
       "@type" : "@id"
     },
     "flightMadeBy" : {

@@ -20,7 +20,7 @@
     }, {
       "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure"
     }, {
-      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Solo_leisure"
+      "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure"
     } ]
   } ]
 }, {
@@ -85,8 +85,53 @@
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Type of leisure travel where the passenger travels with their couple."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Couple_leisure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cheapest type of seat."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Economy_class"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Type of leisure travel where the passenger travels with their family."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Family_leisure"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the place where the plane departed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "originIs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Airplane",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -209,22 +254,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Type of leisure travel where the passenger travels with their couple."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Couple_leisure"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Cheapest type of seat."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Economy_class"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_quality",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -266,13 +299,7 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Type of leisure travel where the passenger travels with their family."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Family_leisure"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
@@ -734,9 +761,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place"
-  } ],
-  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
-    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/flightMadeBy",
@@ -815,19 +839,7 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates the place where the plane departed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Flight"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "originIs"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Place"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],

@@ -16,6 +16,10 @@
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs
+:originIs rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
 rdfs:sameAs rdf:type owl:AnnotationProperty .
 
@@ -29,7 +33,6 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                         owl:AsymmetricProperty ;
                rdfs:domain :Flight ;
                rdfs:range :Place ;
-               owl:propertyDisjointWith :originIs ;
                rdfs:comment "Indicates the place where the plane arrived." ;
                rdfs:label "destinationIs" .
 
@@ -41,15 +44,6 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
               rdfs:range :Airplane ;
               rdfs:comment "Indicates which plane made the flight" ;
               rdfs:label "flightMadeBy" .
-
-
-###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/originIs
-:originIs rdf:type owl:ObjectProperty ,
-                   owl:AsymmetricProperty ;
-          rdfs:domain :Flight ;
-          rdfs:range :Place ;
-          rdfs:comment "Indicates the place where the plane departed." ;
-          rdfs:label "originIs" .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/reviewsFlight
@@ -87,6 +81,15 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
            rdfs:range :Author ;
            rdfs:comment "Indicates who wrote the review." ;
            rdfs:label "writtenBy" .
+
+
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews//originIs> rdf:type owl:ObjectProperty ,
+                                                                                       owl:AsymmetricProperty ;
+                                                                              rdfs:domain :Flight ;
+                                                                              rdfs:range :Place ;
+                                                                              rdfs:comment "Indicates the place where the plane departed." ;
+                                                                              rdfs:label "originIs" .
 
 
 #################################################################
@@ -263,7 +266,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
          owl:equivalentClass [ rdf:type owl:Class ;
                                owl:oneOf ( :Couple_leisure
                                            :Family_leisure
-                                           :Solo_leisure
+                                           <http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure>
                                          )
                              ] ;
          rdfs:subClassOf :TravellerType ;
@@ -378,6 +381,24 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Couple_leisure> rdf:type owl:NamedIndividual ;
+                                                                                   rdfs:comment "Type of leisure travel where the passenger travels with their couple." ;
+                                                                                   rdfs:label "Couple_leisure" .
+
+
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Economy_class> rdf:type owl:NamedIndividual ;
+                                                                                  rdfs:comment "Cheapest type of seat." ;
+                                                                                  rdfs:label "Economy_class" .
+
+
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure
+<http://www.semanticweb.org/miguel/ontologies/2024/3/FlightReviews/Family_leisure> rdf:type owl:NamedIndividual ;
+                                                                                   rdfs:comment "Type of leisure travel where the passenger travels with their family." ;
+                                                                                   rdfs:label "Family_leisure" .
+
+
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Barcelona
 :Barcelona rdf:type owl:NamedIndividual ,
                     :European_city ;
@@ -400,21 +421,15 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Couple_leisure
-:Couple_leisure rdf:type owl:NamedIndividual ;
-                rdfs:comment "Type of leisure travel where the passenger travels with their couple." ;
-                rdfs:label "Couple_leisure" .
+:Couple_leisure rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Economy_class
-:Economy_class rdf:type owl:NamedIndividual ;
-               rdfs:comment "Cheapest type of seat." ;
-               rdfs:label "Economy_class" .
+:Economy_class rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/Family_leisure
-:Family_leisure rdf:type owl:NamedIndividual ;
-                rdfs:comment "Type of leisure travel where the passenger travels with their family." ;
-                rdfs:label "Family_leisure" .
+:Family_leisure rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/First_class
@@ -519,6 +534,10 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                   :North_American_city ;
          rdfs:comment "Instance of North American city" ;
          rdfs:label "Toronto" .
+
+
+###  http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure
+<http://www.semanticweb.org/miguel/ontologies/2024/3/flightReviews/:Solo_leisure> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
